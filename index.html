@@ -73,6 +73,8 @@
 
 <!-- RQE 27461 (Psiquiatria) confirmado em 28/08/2026 no arquivo público do CRM-MG. -->
 
+<!-- Faixa de esboço: remover no lançamento (data-fill="esboco") -->
+<div class="esboco" data-fill="esboco" role="note">Esboço para revisão. Arte, fotos e textos ainda serão ajustados com o Dr. Alex.</div>
 <header class="topo">
   <div class="container">
     <a class="marca" href="#inicio" aria-label="Início">
@@ -109,11 +111,12 @@
         </div>
       </div>
       <!-- Identidade do cartão de visita: placa escura com o homem vitruviano em mosaico (assets/vitruviano-mosaico-720.png) -->
-      <div class="hero-placa" aria-hidden="true">
-        <img src="assets/vitruviano-mosaico-720.png" alt="" width="571" height="720" decoding="async">
+      <!-- Arte provisória: o mosaico é um esboço; a arte definitiva ainda será produzida.
+           No lançamento, remover .placa-aviso e a classe "provisoria" da placa. -->
+      <div class="hero-placa provisoria" data-fill="arte">
+        <img src="assets/vitruviano-mosaico-720.png" alt="" width="571" height="720" decoding="async" aria-hidden="true">
+        <span class="placa-aviso">Arte em breve</span>
       </div>
-      <!-- Aviso provisório: a arte definitiva da identidade ainda será produzida. Remover no lançamento. -->
-      <p class="hero-aviso" data-fill="arte">Arte em breve</p>
     </div>
   </section>
 
