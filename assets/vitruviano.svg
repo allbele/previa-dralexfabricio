@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600" role="img" aria-labelledby="t">
+  <title id="t">Homem vitruviano estilizado: figura humana inscrita em círculo e quadrado</title>
+  <!-- Traço fino, versão geométrica. Cor herdada via currentColor. -->
+  <g fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke">
+    <!-- Quadrado (altura = envergadura) -->
+    <rect x="80" y="90" width="440" height="440"/>
+    <!-- Círculo com centro no umbigo -->
+    <circle cx="300" cy="285" r="245"/>
+    <!-- Linhas de construção -->
+    <g stroke-opacity=".45" stroke-width=".7" stroke-dasharray="3 5">
+      <line x1="80" y1="285" x2="520" y2="285"/>
+      <line x1="300" y1="90" x2="300" y2="530"/>
+      <line x1="80" y1="185" x2="520" y2="185"/>
+    </g>
+    <!-- Cabeça -->
+    <circle cx="300" cy="130" r="24"/>
+    
+    <!-- Pescoço e ombros -->
+    <path d="M300 154v20M258 180c12-6 72-6 84 0"/>
+    <!-- Torso -->
+    <path d="M262 182c-4 40-2 90 8 138M338 182c4 40 2 90-8 138M270 320c10 6 50 6 60 0"/>
+    <path d="M300 200v70" stroke-opacity=".5"/>
+    <!-- Braços horizontais (tocam o quadrado) -->
+    <path d="M262 182L172 186L82 190M338 182L428 186L518 190"/>
+    <path d="M82 190l-2-6M82 190l-1 7M518 190l2-6M518 190l1 7"/>
+    <!-- Braços erguidos (tocam o círculo) -->
+    <path d="M262 182L200 160L114 128M338 182L400 160L486 128"/>
+    <path d="M114 128l-3-6M114 128l-2 6M486 128l3-6M486 128l2 6"/>
+    <!-- Pernas juntas (tocam o quadrado) -->
+    <path d="M276 322L282 430L286 528M324 322L318 430L314 528"/>
+    <path d="M286 528h-14M314 528h14"/>
+    <!-- Pernas abertas (tocam o círculo) -->
+    <path d="M274 326L232 420L186 500M326 326L368 420L414 500"/>
+    <path d="M186 500l-10 8M414 500l10 8"/>
+  </g>
+</svg>
