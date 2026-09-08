@@ -8,7 +8,7 @@
   <!-- PRÉVIA: impede indexação pelos buscadores. REMOVER esta linha no lançamento. -->
   <meta name="robots" content="noindex, nofollow">
 
-  <meta name="description" content="Dr. Alex Fabrício de Oliveira, psiquiatra em Ubá/MG (CRM/MG 51545, RQE 27461). Consultas de uma hora, presenciais ou por teleconsulta, para adultos, adolescentes e idosos. Segunda opinião e trabalho conjunto com psicólogos.">
+  <meta name="description" content="Dr. Alex Fabrício de Oliveira, psiquiatra em Ubá/MG (CRM/MG 51545, RQE 27461). Consultas de uma hora, presenciais ou por teleconsulta, para adultos, adolescentes e idosos. Revisão de tratamentos em curso e trabalho conjunto com psicólogos.">
   <meta name="author" content="Dr. Alex Fabrício de Oliveira">
   <meta name="theme-color" content="#f7f4ee">
   <link rel="canonical" href="https://dralexfabricio.com.br/">
@@ -46,7 +46,7 @@
     ],
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Rua Coronel Júlio Soares, 151, Centro",
+      "streetAddress": "Rua Coronel Júlio Soares, 151-B, Centro",
       "addressLocality": "Ubá",
       "addressRegion": "MG",
       "postalCode": "36500-051",
@@ -99,7 +99,7 @@
     <div class="container hero-grade">
       <div class="hero-texto">
         <h1 id="titulo">Dr. Alex Fabrício de Oliveira</h1>
-        <p class="titulo-cargo">Psiquiatria e Psicoterapia</p>
+        <p class="titulo-cargo">Psiquiatria</p>
         <p class="registro">CRM/MG 51545 · <span data-fill="rqe">RQE 27461</span></p>
         <div class="filete" aria-hidden="true"><span></span></div>
         <p class="lead">Consultas de uma hora, com tempo para escutar. Um médico que se propõe a ser tradutor entre a pessoa e a ciência, considerando tanto os recursos medicamentosos quanto os não medicamentosos.</p>
@@ -108,12 +108,12 @@
           <a class="link-discreto" href="#filosofia">Conhecer o modo de trabalho</a>
         </div>
       </div>
-      <!-- Identidade do cartão de visita: placa escura com o homem vitruviano em mosaico (assets/vitruviano-mosaico-720.png) -->
-      <!-- Arte provisória: o mosaico é um esboço; a arte definitiva ainda será produzida.
-           No lançamento, remover .placa-aviso e a classe "provisoria" da placa. -->
-      <div class="hero-placa provisoria" data-fill="arte">
-        <img src="assets/vitruviano-mosaico-720.png" alt="" width="571" height="720" decoding="async" aria-hidden="true">
-        <span class="placa-aviso"><span>Arte provisória</span><small>apenas um exemplo</small></span>
+      <!-- Identidade do cartão de visita: placa escura com o homem vitruviano.
+           A arte vem do line art da gráfica do Dr. Alex (Projeto/assets/marca/Vitruvian preto.jpg),
+           gerada por assets/../../assets/marca/gerar-arte.py. O CSS pinta a máscara, então a cor
+           do traço muda no CSS, não no arquivo. Alternativa em ladrilhos: vitruviano-mosaico-mask.webp. -->
+      <div class="hero-placa" data-fill="arte">
+        <span class="marca-vitruviano" aria-hidden="true"></span>
       </div>
     </div>
   </section>
@@ -121,19 +121,18 @@
   <!-- ================= APRESENTAÇÃO ================= -->
   <section class="secao apresentacao" id="apresentacao" aria-labelledby="t-apresentacao">
     <div class="container grade-2">
-      <figure class="retrato revela" aria-label="Retrato do Dr. Alex Fabrício de Oliveira">
-        <!--
-          Para colocar a foto: substitua os dois elementos abaixo por
-          <img src="assets/retrato.jpg" alt="Dr. Alex Fabrício de Oliveira" width="800" height="1000">
-        -->
-        <div class="retrato-selo" aria-hidden="true"><img src="assets/vitruviano-mosaico-720.png" alt="" width="571" height="720" loading="lazy" decoding="async"></div>
-        <figcaption class="retrato-legenda" data-fill="retrato">Retrato em breve</figcaption>
+      <figure class="retrato revela" aria-label="Retrato do Dr. Alex Fabrício de Oliveira" data-fill="retrato">
+        <!-- Foto atual: assets/estudio/SPA_busto.jpg, recortada em 4:5.
+             Para trocar, gerar de novo assets/retrato.jpg (800x1000) e assets/retrato@2x.jpg (1600x2000)
+             a partir de outro arquivo de assets/estudio/. Aguardando aprovação do Dr. Alex. -->
+        <img src="assets/retrato.jpg" srcset="assets/retrato.jpg 1x, assets/retrato@2x.jpg 2x"
+             alt="Dr. Alex Fabrício de Oliveira" width="800" height="1000" loading="lazy" decoding="async">
       </figure>
       <div class="revela">
         <span class="eyebrow">O médico</span>
         <h2 id="t-apresentacao">Uma clínica que se explica</h2>
-        <p class="lead">Psiquiatra formado pela Universidade Federal do Rio de Janeiro e mestre em Filosofia, o Dr. Alex Fabrício atende adultos, adolescentes e idosos em consultório em Ubá/MG e ensina psiquiatria e comunicação clínica <span data-fill="docencia">no curso de medicina da UNIFAGOC</span>.</p>
-        <p>Boa parte de quem o procura chega em busca de uma segunda opinião: alguém que revise o que já foi tentado, explique com clareza o que a ciência sabe e o que ainda não sabe, e construa junto um caminho de tratamento que faça sentido para a vida daquela pessoa.</p>
+        <p class="lead">Médico pela Universidade Federal de Juiz de Fora, psiquiatra com residência <span data-fill="residencia">na Universidade Federal do Rio de Janeiro</span> e mestre em Filosofia pela Unesp, o Dr. Alex Fabrício atende adultos, adolescentes e idosos em consultório em Ubá/MG e ensina psiquiatria e comunicação clínica <span data-fill="docencia">no curso de medicina do UNIFAGOC</span>.</p>
+        <p>Boa parte de quem o procura já tentou caminhos diversos para enfrentar o que está vivendo e chega sentindo a necessidade de alguém que revise o que já foi feito, explique com clareza o que a ciência sabe e o que ainda não sabe, e construa junto um tratamento que faça sentido para a vida daquela pessoa.</p>
         <p>O trabalho parte de uma convicção simples: entender o que está acontecendo é parte do tratamento. Por isso a consulta é longa, o vocabulário é acessível e as decisões são tomadas em diálogo.</p>
       </div>
     </div>
@@ -159,11 +158,11 @@
         </li>
         <li>
           <h3>Medicação e outros recursos, em equilíbrio</h3>
-          <p>Os medicamentos são uma ferramenta valiosa, mas não a única. Psicoterapia, mudanças de rotina, sono, vínculos e trabalho fazem parte da conversa e do plano.</p>
+          <p>Os medicamentos são uma ferramenta valiosa, mas não a única. Acompanhamento com psicólogo, mudanças de rotina, sono, vínculos e trabalho fazem parte da conversa e do plano.</p>
         </li>
         <li>
-          <h3>Segunda opinião</h3>
-          <p>Revisão cuidadosa de diagnósticos e tratamentos em curso, com respeito ao trabalho de outros colegas e franqueza sobre alternativas.</p>
+          <h3>Revisão do que já foi tentado</h3>
+          <p>Leitura cuidadosa de diagnósticos e tratamentos em curso, com respeito ao trabalho de outros colegas e franqueza sobre alternativas.</p>
         </li>
         <li>
           <h3>Trabalho em equipe</h3>
@@ -174,6 +173,13 @@
           <p>A formação em Filosofia sustenta uma clínica atenta ao sentido, à biografia e aos valores de cada pessoa, e não só aos critérios diagnósticos.</p>
         </li>
       </ul>
+    </div>
+  </section>
+
+  <!-- ================= LEMA EM DESTAQUE ================= -->
+  <section class="faixa-lema" aria-label="Lema do consultório">
+    <div class="container">
+      <p class="lema-grande">Traduzir de um lado para o outro, sem simplificar demais nem esconder incertezas.</p>
     </div>
   </section>
 
@@ -188,15 +194,14 @@
           <li><span class="rotulo">Psiquiatria</span><p class="valor">Residência médica na Universidade Federal do Rio de Janeiro, 2005<small><span data-fill="rqe">RQE 27461</span></small></p></li>
           <li><span class="rotulo">Mestrado</span><p class="valor">Mestre em Filosofia pela Universidade Estadual Paulista (Unesp), Marília, 2010</p></li>
           <li><span class="rotulo">Clínica</span><p class="valor">Consultório médico desde 2006<small>Atualmente em Ubá/MG, com consultas presenciais e teleconsulta</small></p></li>
-          <li><span class="rotulo">Docência</span><p class="valor">Professor de psiquiatria e comunicação clínica <span data-fill="docencia">no curso de medicina da UNIFAGOC, em Ubá, desde 2017, onde também é coordenador de área e preceptor do estágio em psicogeriatria</span><small>Antes, professor e coordenador de disciplinas de medicina na UFV (2015 a 2022) e professor da FAMEMA (2005 a 2010), com passagem por cursos de enfermagem e psicologia</small></p></li>
+          <li><span class="rotulo">Docência</span><p class="valor">Professor de psiquiatria e comunicação clínica <span data-fill="docencia">no curso de medicina do UNIFAGOC, em Ubá, desde 2017, onde também é coordenador de área e preceptor do estágio em psicogeriatria</span><small>Antes, professor e coordenador de disciplinas de medicina na UFV (2015 a 2022) e professor da FAMEMA (2005 a 2010), com passagem por cursos de enfermagem e psicologia</small></p></li>
           <li><span class="rotulo">Pós-graduação</span><p class="valor">Professor de cursos de pós-graduação em Psiquiatria em Juiz de Fora<small>IESPE (2017 a 2025) e Hospital Albert Sabin (2026). Anteriormente, supervisor da urgência da residência de psiquiatria e tutor da residência multiprofissional em saúde da família, na FAMEMA</small></p></li>
-          <li><span class="rotulo">Interesse</span><p class="valor">Psicogeriatria: saúde mental da pessoa idosa<small>Área de estudo, ensino e atuação clínica, com atenção às particularidades do envelhecer</small></p></li>
         </ul>
       </div>
       <div class="revela">
         <h3>Ensinar também é clínica</h3>
         <p>Em sala de aula desde 2005 e em consultório desde 2006, o Dr. Alex Fabrício entende que as duas atividades se alimentam mutuamente. Ensinar estudantes de medicina a conduzir uma entrevista, a comunicar um diagnóstico e a lidar com a incerteza exige a mesma clareza que se deve a um paciente.</p>
-        <p>Estudantes e recém-formados que procuram orientação para provas de residência e para o ENAMED encontram no projeto "Psiquiatria em prova" um espaço de estudo dirigido, com o rigor da psiquiatria acadêmica e a linguagem da prática.</p>
+        <p>Estudantes e recém-formados que procuram orientação em psiquiatria encontram nele a mesma disposição de explicar: o rigor da psiquiatria acadêmica com a linguagem da prática.</p>
       </div>
     </div>
   </section>
@@ -215,9 +220,9 @@
         <li><span class="num">Depois</span><h3>Plano compartilhado</h3><p>As hipóteses e as opções são explicadas com clareza. O plano, medicamentoso ou não, é decidido em conjunto e revisto nos retornos.</p></li>
       </ol>
       <div class="publicos revela">
-        <div><h3>Para quem busca atendimento</h3><p>Adultos, adolescentes e idosos que desejam uma avaliação cuidadosa, uma segunda opinião ou acompanhamento continuado. Crianças são encaminhadas a colegas especializados em psiquiatria da infância e da adolescência.</p></div>
+        <div><h3>Para quem busca atendimento</h3><p>Adultos, adolescentes e idosos que desejam uma avaliação cuidadosa, uma revisão do que já foi tentado ou acompanhamento continuado. Crianças são encaminhadas a colegas especializados em psiquiatria da infância e da adolescência.</p></div>
         <div><h3>Para psicólogos</h3><p>Encaminhamentos são bem-vindos. O trabalho conjunto, com troca de informações autorizada pelo paciente, é parte do modo de atender.</p></div>
-        <div><h3>Para estudantes de medicina</h3><p>Orientação e ensino de psiquiatria, incluindo o projeto "Psiquiatria em prova". Contato pelo Instagram ou pelo e-mail profissional.</p></div>
+        <div><h3>Para estudantes de medicina</h3><p>Orientação e ensino de psiquiatria. Contato pelo Instagram ou pelo e-mail profissional.</p></div>
       </div>
     </div>
   </section>
@@ -237,7 +242,7 @@
         <p class="aviso">Este canal não atende urgências. Em situação de risco, procure um pronto-socorro ou ligue 192 (SAMU). O CVV atende 24 horas pelo 188.</p>
       </div>
       <ul class="dados revela">
-        <li><span class="rotulo">Consultório</span><span class="valor" data-fill="endereco">Rua Coronel Júlio Soares, 151, Centro<br>Ubá/MG, CEP 36500-051<br>Em frente à Unimed-Ubá</span></li>
+        <li><span class="rotulo">Consultório</span><span class="valor" data-fill="endereco">Rua Coronel Júlio Soares, 151-B, Centro<br>Ubá/MG, CEP 36500-051<br>Em frente à Unimed-Ubá</span></li>
         <li><span class="rotulo">WhatsApp e telefone</span><span class="valor" data-fill="telefone"><a href="tel:+5532998462999">(32) 99846-2999</a><br><small>Secretaria, para agendamento</small></span></li>
         <li><span class="rotulo">Horário de atendimento</span><span class="valor" data-fill="horario">Segunda a sexta, das 7h às 17h</span></li>
         <li><span class="rotulo">Atendimento</span><span class="valor">Particular, sem convênios. Consultas de uma hora</span></li>

@@ -153,12 +153,19 @@ p { margin: 0 0 1.1em; max-width: var(--medida); }
   overflow: hidden;
   justify-self: end; width: 100%; max-width: 520px;
 }
-.hero-placa::before {
-  /* círculo fino do fundo do cartão */
-  content: ""; position: absolute; width: 96%; aspect-ratio: 1; left: 36%; top: 50%; transform: translate(-50%, -50%);
-  border: 1px solid rgba(239,231,214,.12); border-radius: 50%;
-}
+/* O círculo fino do cartão saiu: o próprio desenho traz o círculo e o quadrado de Leonardo,
+   e dois anéis concorriam entre si. */
 .hero-placa img { position: absolute; height: 90%; width: auto; right: 6%; top: 50%; transform: translateY(-50%); max-width: none; }
+/* A arte é uma máscara em tons de cinza pintada pelo CSS: um arquivo só serve em dourado
+   aqui e em grafite noutro fundo, e pesa um quinto de um PNG colorido. */
+.marca-vitruviano { position: absolute; height: 94%; aspect-ratio: 1; left: 50%; top: 50%; transform: translate(-50%, -50%); }
+@supports ((mask-image: url("")) or (-webkit-mask-image: url(""))) {
+  .marca-vitruviano {
+    background-color: var(--dourado-claro); opacity: .9;
+    -webkit-mask: url("../assets/vitruviano-linha-mask.webp") center / contain no-repeat;
+            mask: url("../assets/vitruviano-linha-mask.webp") center / contain no-repeat;
+  }
+}
 @media (max-width: 859px) { .hero-placa { aspect-ratio: 16 / 9; max-width: 560px; justify-self: start; } }
 
 /* Botões */
@@ -211,6 +218,14 @@ p { margin: 0 0 1.1em; max-width: var(--medida); }
 .principios li::before { content: ""; position: absolute; left: 0; top: .55em; width: 7px; height: 7px; background: var(--dourado); transform: rotate(45deg); }
 .principios h3 { margin-bottom: .25rem; }
 .principios p { margin: 0; color: var(--grafite-suave); }
+
+/* ---------- Lema em destaque ---------- */
+.faixa-lema { background: var(--placa); padding: clamp(3rem, 8vw, 5.5rem) 0; }
+.lema-grande {
+  font-family: var(--serif); font-style: italic; color: var(--placa-texto);
+  font-size: clamp(1.6rem, 4.2vw, 3rem); line-height: 1.25;
+  margin: 0; max-width: 26ch; text-wrap: balance;
+}
 
 /* ---------- Formação ---------- */
 .formacao { background: var(--branco); }
