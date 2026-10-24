@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://dralexfabricio.com.br/sitemap.xml

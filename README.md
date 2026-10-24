@@ -12,9 +12,11 @@ site/
 │   ├── vitruviano-mosaico-720.png  mesma imagem, 571x720, usada no hero e no retrato provisório
 │   ├── vitruviano-cartao.jpg       pergaminho original extraído do PDF do cartão (fonte do mosaico; não é usado no site)
 │   ├── vitruviano.svg              line-art geométrico (favicon, marca do cabeçalho e do rodapé)
-│   └── og.png                      imagem para redes sociais (1200x630)
+│   └── og.png                      imagem para redes sociais (1200x630); fonte em _capturas/og-fonte.html
 ├── favicon.svg
-├── publicar.sh         publica no GitHub Pages (ver abaixo)
+├── robots.txt, sitemap.xml
+├── publicar.sh         publica a prévia no GitHub Pages (ver abaixo)
+├── lancar.sh           lança no domínio dralexfabricio.com.br (Opção C); reverter-lancamento.sh desfaz
 └── _capturas/          screenshots de verificação e script capturar.mjs (não precisa publicar)
 ```
 
@@ -65,7 +67,10 @@ Enquanto for prévia, as duas páginas têm:
 <meta name="robots" content="noindex, nofollow">
 ```
 
-Apague essa linha em `index.html` e `privacidade.html` quando o site for ao ar no domínio definitivo. Confira também que `<link rel="canonical">` e `og:url` apontam para `https://dralexfabricio.com.br/`.
+O `lancar.sh` (seção 3, Opção C) troca essa linha por `index, follow` em `index.html` e `privacidade.html`, confere `<link rel="canonical">` e `og:url` e publica. Para fazer à mão: apague a linha nos dois arquivos e confira que canonical e `og:url` apontam para `https://dralexfabricio.com.br/`.
+
+### E-mail (`sem-email`)
+A caixa `contato@dralexfabricio.com.br` ainda não existe. Os elementos de e-mail (botão "Escrever e-mail", item da lista de contato, link do rodapé) têm `class="so-com-email"` ou `data-fill="email"`; a regra `html.sem-email ...` em `css/estilo.css` os esconde quando o `<html>` de `index.html` tem a classe `sem-email`. O `lancar.sh` põe essa classe (e tira a linha `"email"` do JSON-LD) a menos que seja executado com `COM_EMAIL=1`. Os `mailto:` do texto de `privacidade.html` não são afetados: trocar à mão se a caixa não for criada.
 
 ## 3. Publicar
 
@@ -82,6 +87,18 @@ Ele cria o repositório `previa-dralexfabricio` (privado se o plano permitir Pag
 Copie o conteúdo desta pasta (exceto `_capturas/` e `publicar.sh`) para a raiz do servidor: Netlify, Vercel, Cloudflare Pages, HostGator, Hostinger, um bucket S3 etc. Não há dependências nem build. Garanta HTTPS.
 
 ### Opção C: domínio definitivo (registro.br → GitHub Pages)
+Com os registros DNS criados (passo 2 abaixo) e `gh auth status` ok, o lançamento é um comando, a partir desta pasta:
+
+```sh
+sh lancar.sh                 # sem os elementos de e-mail (caixa contato@ ainda não existe)
+COM_EMAIL=1 sh lancar.sh     # com e-mail, quando a caixa estiver criada
+SECO=1 sh lancar.sh          # modo seco: só edita os arquivos, sem commit/push/API
+```
+
+Ele grava o `CNAME`, remove o `noindex`, confere canonical/og:url, faz commit e push, define o domínio no Pages, tenta ligar "Enforce HTTPS" (repetir depois se o certificado ainda não tiver sido emitido) e imprime um diagnóstico (`dig`, `curl`). Para desfazer: `sh reverter-lancamento.sh` (edita os arquivos e tira o domínio do Pages; commit e push ficam por sua conta). `robots.txt` e `sitemap.xml` já apontam para o domínio.
+
+Passo a passo manual, se preferir:
+
 1. Crie um arquivo `CNAME` na raiz do repositório com o conteúdo `dralexfabricio.com.br` (ou em Settings → Pages → Custom domain).
 2. No painel do registro.br, em "Editar zona" (DNS), crie:
 
@@ -92,7 +109,7 @@ Copie o conteúdo desta pasta (exceto `_capturas/` e `publicar.sh`) para a raiz 
    | A | `@` | `185.199.110.153` |
    | A | `@` | `185.199.111.153` |
    | AAAA | `@` | `2606:50c0:8000::153`, `2606:50c0:8001::153`, `2606:50c0:8002::153`, `2606:50c0:8003::153` |
-   | CNAME | `www` | `<usuario>.github.io.` |
+   | CNAME | `www` | `allbele.github.io.` |
 
 3. Espere a propagação (até algumas horas), marque "Enforce HTTPS" nas configurações do Pages.
 4. Se for usar outro provedor de hospedagem, siga os registros que ele indicar em vez destes.
@@ -107,6 +124,8 @@ node _capturas/capturar.mjs
 ```
 
 Gera em `_capturas/`: `desktop-full.png` (1440x900, página inteira), `desktop-hero.png`, `mobile-full.png` (390x844, página inteira), `mobile-hero.png`, `mobile-contato.png`, `privacidade-desktop.png` e `privacidade-mobile.png`.
+
+Observação: aberto por `file://`, o Chrome não aplica a `mask-image` do hero (a placa sai vazia). Para ver o vitruviano nas capturas, sirva a pasta por HTTP (`python3 -m http.server 8765`) e capture `http://127.0.0.1:8765/index.html`; no GitHub Pages renderiza normalmente.
 
 Captura simples de uma tela, sem o script:
 

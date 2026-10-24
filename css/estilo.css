@@ -293,6 +293,11 @@ p { margin: 0 0 1.1em; max-width: var(--medida); }
 /* ---------- Placeholders (valores ainda não confirmados) ---------- */
 [data-fill] { /* sem estilo visual próprio: o texto neutro se integra ao layout */ }
 
+/* ---------- E-mail ----------
+   A caixa contato@dralexfabricio.com.br ainda não existe. Enquanto o <html> tiver a classe
+   "sem-email" (lancar.sh a põe quando COM_EMAIL != 1), os elementos de e-mail ficam ocultos. */
+html.sem-email [data-fill="email"], html.sem-email .so-com-email { display: none !important; }
+
 /* ---------- Revelação suave ---------- */
 .revela { opacity: 0; transform: translateY(14px); transition: opacity .7s ease, transform .7s ease; }
 .revela.visivel, .sem-js .revela { opacity: 1; transform: none; }
