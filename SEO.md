@@ -61,3 +61,20 @@ Conformidade: nada de preço, depoimento de paciente, "antes e depois", promessa
 - Pré-visualização de compartilhamento: https://www.opengraph.xyz/ ou enviar o link num WhatsApp de teste.
 - Velocidade: https://pagespeed.web.dev/ (meta: acima de 90 no celular).
 - Resultado real: Search Console, a partir de 2 a 4 semanas após o envio do sitemap.
+
+## Landing dos anúncios: /consulta/ (27/10)
+
+Página de destino para Google Ads de fundo de funil ("psiquiatra em Ubá", cidades vizinhas, "psiquiatra online").
+Desenho conforme `../pesquisa/landing/00-consolidado-e-recomendacao.md`: uma ação só (WhatsApp, 4 vezes + barra fixa),
+telefone como segunda via, identificação CFM acima da dobra, valor/pagamento (texto neutro até o Alex autorizar o número,
+`data-fill="valor"`), 3 passos, situações, quem atende, 7 dúvidas (inclui "psiquiatra ou psicólogo?"), contato, bloco de
+crise. 733 palavras, 20 KB, sem fontes externas, sem menu, sem quiz.
+
+URLs por anúncio (message match): `/consulta/` (Ubá), `/consulta/?cidade=visconde-do-rio-branco`, `tocantins`, `guidoval`,
+`rodeiro`, `divinesia`, `pirauba`, `juiz-de-fora`, `online`. O parâmetro só troca o H1 e a linha de localização; qualquer
+outro valor cai no padrão.
+
+Conversão: todos os links de WhatsApp, telefone e mapa têm `data-conv`; o script chama `gtag_report_conversion(url, tipo)`
+se existir. Quando o Leony passar o ID da tag do Google Ads: instalar a tag só após banner de consentimento (Guia ANPD de
+cookies), definir `gtag_report_conversion` com `event_callback`, e testar no Android e no iPhone. Nunca passar dado de
+saúde em URL ou evento.

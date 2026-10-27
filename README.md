@@ -8,6 +8,7 @@ Site estático (HTML + CSS + JS mínimo), sem framework e sem etapa de build. Ba
 site/
 ├── index.html          página única (hero, apresentação, modo de trabalho, formação, atendimento, contato)
 ├── privacidade.html    aviso de privacidade (LGPD)
+├── consulta/index.html página de destino dos anúncios do Google (uma ação só: WhatsApp; CSS próprio inline; ?cidade=slug troca o título; data-conv para a tag de conversão)
 ├── css/estilo.css      estilos
 ├── assets/
 │   ├── vitruviano-mosaico.png      identidade do médico: homem vitruviano em mosaico de placas douradas, como no cartão de visita (1415x1783, fundo transparente)
