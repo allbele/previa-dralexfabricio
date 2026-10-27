@@ -88,15 +88,16 @@
     .branco{background:var(--branco)}
     .lead{font-size:1.05rem;color:var(--cinza);max-width:40ch}
 
-    .passos{list-style:none;margin:1.4rem 0 0;padding:0;position:relative}
-    .passos::before{content:"";position:absolute;left:17px;top:10px;bottom:10px;width:2px;background:var(--linha)}
-    .passos::after{content:"";position:absolute;left:17px;top:10px;width:2px;height:0;background:var(--ouro);transition:height 1.6s cubic-bezier(.4,0,.2,1)}
-    .passos.on::after{height:calc(100% - 20px)}
+    .passos{list-style:none;margin:1.4rem 0 0;padding:0}
     .passos li{position:relative;padding:0 0 1.5rem 3.1rem}
     .passos li:last-child{padding-bottom:0}
+    .passos li:not(:last-child)::before{content:"";position:absolute;left:17px;top:42px;height:calc(100% - 42px);width:2px;background:var(--linha)}
+    .passos li:not(:last-child)::after{content:"";position:absolute;left:17px;top:42px;height:0;width:2px;background:var(--ouro);transition:height .7s ease}
+    .passos.on li:not(:last-child)::after{height:calc(100% - 42px)}
+    .passos.on li:nth-child(2)::after{transition-delay:.7s}
     .passos .n{position:absolute;left:0;top:0;width:36px;height:36px;border-radius:50%;background:var(--branco);border:2px solid var(--linha);display:grid;place-items:center;font-family:var(--serif);color:var(--ouro);transition:border-color .4s,background .4s,color .4s}
     .passos.on .n{border-color:var(--ouro);background:var(--ouro);color:#fff}
-    .passos.on li:nth-child(2) .n{transition-delay:.6s}.passos.on li:nth-child(3) .n{transition-delay:1.2s}
+    .passos.on li:nth-child(2) .n{transition-delay:.7s}.passos.on li:nth-child(3) .n{transition-delay:1.4s}
     .passos p{margin:0;color:var(--cinza);font-size:.98rem}
 
     .preco{background:var(--branco);border:1px solid var(--linha);border-left:4px solid var(--ouro);padding:1.1rem 1.2rem;border-radius:0 8px 8px 0}
@@ -154,7 +155,7 @@
       .b{opacity:1;transform:none;transition:none}
       .dig{display:none!important}
       .cta.pulsa::before{animation:none}
-      .passos::after{transition:none}
+      .passos li::after{transition:none}
       .fixa{transition:none}
       .resp{transition:none}
     }
