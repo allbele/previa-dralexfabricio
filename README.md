@@ -1,5 +1,7 @@
 # Site institucional · Dr. Alex Fabrício de Oliveira
 
+SEO: ver `SEO.md` (o que está feito na página, o que depende do Mateus, segunda fase).
+
 Site estático (HTML + CSS + JS mínimo), sem framework e sem etapa de build. Basta copiar os arquivos para qualquer servidor web.
 
 ```
@@ -23,7 +25,9 @@ site/
 ## Identidade visual
 A peça que o médico reconhece como sua é o homem vitruviano em mosaico, do cartão de visita (fundo preto, placas douradas inclinadas) e do cabeçalho do receituário (mosaico pequeno dentro de um círculo). O site usa:
 
-- no **hero**, uma placa escura (`.hero-placa`) com o mosaico, reproduzindo o cartão;
+- no **hero**, uma placa de pergaminho claro (`.hero-placa`, `--pergaminho`) com o traço do vitruviano em dourado escuro.
+  **Desde 27/10 nenhum fundo do site é preto**: a placa é clara e as faixas escuras (lema, contato, rodapé) usam o verde
+  profundo `--placa: #27392f`. O favicon e a `og.png` seguem a mesma regra;
 - no **retrato provisório**, o mosaico dentro de um círculo fino (`.retrato-selo`), como no receituário; sai quando entrar a foto;
 - no cabeçalho, rodapé e favicon, o line-art `vitruviano.svg`, mais discreto.
 
