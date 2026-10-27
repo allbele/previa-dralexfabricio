@@ -4,96 +4,160 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Psiquiatra em Ubá/MG · Consulta de 1 hora · Dr. Alex Fabrício de Oliveira</title>
-  <meta name="description" content="Psiquiatra em Ubá/MG. Consulta particular de 1 hora, presencial ou por vídeo, para adultos, adolescentes e idosos. Fale com a secretaria pelo WhatsApp e receba os horários.">
+  <meta name="description" content="Psiquiatra em Ubá/MG. Consulta particular de uma hora, presencial ou por vídeo, para adultos, adolescentes e idosos. Escreva para a secretaria no WhatsApp e receba os horários.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://dralexfabricio.com.br/consulta/">
-  <meta name="theme-color" content="#f7f4ee">
+  <meta name="theme-color" content="#1f3128">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:title" content="Psiquiatra em Ubá/MG · Consulta de 1 hora">
-  <meta property="og:description" content="Dr. Alex Fabrício de Oliveira, Médico, CRM/MG 51545, Psiquiatra RQE 27461. Presencial em Ubá ou por vídeo. Agende pelo WhatsApp da secretaria.">
+  <meta property="og:description" content="Dr. Alex Fabrício de Oliveira, médico, CRM/MG 51545, psiquiatra, RQE 27461. Presencial em Ubá ou por vídeo. Escreva para a secretaria no WhatsApp.">
   <meta property="og:url" content="https://dralexfabricio.com.br/consulta/">
   <meta property="og:image" content="https://dralexfabricio.com.br/assets/og.png">
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <!--
-    Página de destino dos anúncios do Google (pesquisa de fundo de funil: "psiquiatra em Ubá", cidades vizinhas,
-    "psiquiatra online"). Uma ação só: WhatsApp da secretaria. Sem menu, sem links para fora, sem quiz.
-    Cidade no título por parâmetro (?cidade=visconde-do-rio-branco), só da lista permitida em CIDADES (script no fim).
-    Conversão: todo link de WhatsApp e telefone tem data-conv; a função registrarConversao chama gtag_report_conversion
-    se a tag do Google Ads estiver instalada (o Leony passa o ID; a tag entra só depois do banner de consentimento).
-    Regras: Res. CFM 2.336/2023 (nome + Médico + CRM + Psiquiatra + RQE; sem promessa, superlativo, depoimento);
-    nenhum dado de saúde em URL, tag ou servidor.
+    Página de destino dos anúncios do Google (fundo de funil: "psiquiatra em Ubá", cidades vizinhas, "psiquiatra online").
+    Mobile first. Uma ação: WhatsApp da secretaria. O herói mostra uma conversa de exemplo que se escreve sozinha.
+    Cidade no título por ?cidade=slug (lista CIDADES no script). data-conv nos links para a tag do Google Ads.
+    Res. CFM 2.336/2023: nome + médico + CRM + psiquiatra + RQE; sem promessa, superlativo ou depoimento.
+    Nenhum dado de saúde em URL, tag ou servidor. prefers-reduced-motion respeitado.
   -->
   <style>
-    :root{--creme:#f7f4ee;--branco:#fffdf9;--grafite:#2b2a28;--suave:#55524c;--dourado:#8c6d3f;--filete:#d9cdb2;--verde:#27392f;--verde-texto:#efe7d6;--whats:#1f7a4d;--pergaminho:#efe6d2;
-      --serif:Georgia,"Times New Roman",serif;--sans:"Helvetica Neue",Helvetica,Arial,sans-serif}
+    :root{
+      --verde:#1f3128;--verde-2:#2a4034;--verde-texto:#eef0e6;--verde-mudo:#a9b8a9;
+      --creme:#f6f3ec;--branco:#fffdf8;--tinta:#22251f;--cinza:#5d6158;--linha:#dcd6c6;
+      --ouro:#9a7a44;--whats:#25d366;--whats-escuro:#128c4a;--bolha:#dcf8c6;
+      --serif:Georgia,"Times New Roman",serif;--sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    }
     *{box-sizing:border-box}
-    html{-webkit-text-size-adjust:100%}
-    body{margin:0;background:var(--creme);color:var(--grafite);font:17px/1.6 var(--sans);-webkit-font-smoothing:antialiased;padding-bottom:4.2rem}
+    html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+    body{margin:0;background:var(--creme);color:var(--tinta);font:17px/1.55 var(--sans);-webkit-font-smoothing:antialiased;padding-bottom:5rem}
     img{max-width:100%;display:block}
-    a{color:var(--dourado)}
-    .c{width:min(100% - 2.5rem,960px);margin-inline:auto}
-    h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.2;margin:0 0 .6rem;color:var(--grafite)}
-    h1{font-size:clamp(1.7rem,5.2vw,2.6rem);font-variant-caps:small-caps;letter-spacing:.03em}
-    h2{font-size:clamp(1.35rem,3.4vw,1.8rem);font-variant-caps:small-caps;letter-spacing:.05em}
-    h3{font-size:1.15rem}
-    p{margin:0 0 1em;max-width:60ch}
-    .topo{background:var(--branco);border-bottom:1px solid var(--filete);padding:.7rem 0;font-family:var(--serif);font-variant-caps:small-caps;letter-spacing:.06em;font-size:1rem}
-    .topo .c{display:flex;align-items:center;gap:.6rem}
-    .topo svg{width:26px;height:26px;color:var(--dourado)}
-    .hero{background:var(--branco);padding:2rem 0 2.2rem}
-    .hero .c{display:grid;grid-template-columns:minmax(0,1fr);gap:1.6rem;align-items:center}
-    @media(min-width:760px){.hero .c{grid-template-columns:7fr 4fr;gap:3rem}.hero{padding:3.5rem 0}}
-    .hero figure{margin:0;max-width:300px;justify-self:center}
-    .hero img{width:100%;height:auto;border:1px solid var(--filete);box-shadow:0 0 0 8px var(--branco),0 0 0 9px var(--filete);aspect-ratio:4/5;object-fit:cover}
-    .hero figcaption{font-size:.8rem;color:var(--suave);text-align:center;margin-top:1rem;letter-spacing:.06em}
-    .ident{font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;color:var(--suave);margin:0 0 .9rem}
-    .lead{font-size:1.15rem;color:var(--suave)}
-    .btn{display:inline-block;background:var(--whats);color:#fff;text-decoration:none;font-weight:700;font-size:1.02rem;padding:1rem 1.5rem;border-radius:6px;text-align:center;box-shadow:0 6px 18px -8px rgba(31,122,77,.7)}
-    .btn:hover{background:#185f3c}
-    .btn svg{width:20px;height:20px;vertical-align:-4px;margin-right:.45rem;fill:#fff}
-    .acoes{margin-top:1.4rem;display:flex;flex-wrap:wrap;gap:.8rem 1.2rem;align-items:center}
-    .lig{font-size:.95rem;color:var(--suave)}
-    .nota{font-size:.88rem;color:var(--suave);margin-top:.9rem}
-    .pontos{list-style:none;margin:1.4rem 0 0;padding:0;display:grid;gap:.45rem .9rem;grid-template-columns:1fr 1fr;font-size:.93rem;color:var(--suave)}
-    .pontos li{padding-left:1rem;position:relative}
-    .pontos li::before{content:"";position:absolute;left:0;top:.6em;width:6px;height:6px;background:var(--dourado);transform:rotate(45deg)}
-    section{padding:2.4rem 0;border-top:1px solid var(--filete)}
+    a{color:var(--ouro)}
+    :focus-visible{outline:3px solid var(--whats);outline-offset:3px;border-radius:4px}
+    .c{width:min(100% - 2.25rem,680px);margin-inline:auto}
+    h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0;line-height:1.15}
+    h2{font-size:1.7rem;margin-bottom:.9rem}
+    h3{font-size:1.15rem;margin-bottom:.3rem}
+    p{margin:0 0 1em}
+
+    /* ---------- topo ---------- */
+    .topo{background:var(--verde);color:var(--verde-texto);padding:.9rem 0 .2rem}
+    .topo .c{display:flex;align-items:center;gap:.6rem;font-size:.9rem}
+    .topo svg{width:22px;height:22px;color:var(--verde-mudo);flex:none}
+    .topo small{display:block;color:var(--verde-mudo);font-size:.78rem}
+
+    /* ---------- herói ---------- */
+    .hero{background:var(--verde);color:var(--verde-texto);padding:1.1rem 0 2rem;position:relative;overflow:hidden}
+    .hero::after{content:"";position:absolute;inset:auto -20% -40% -20%;height:60%;background:radial-gradient(ellipse at 50% 100%,rgba(37,211,102,.14),transparent 65%);pointer-events:none}
+    .hero .c{position:relative;z-index:1}
+    .hero h1{font-size:clamp(1.8rem,7.2vw,2.9rem);letter-spacing:-.01em;margin-bottom:.6rem}
+    .hero .sub{font-size:1rem;color:var(--verde-mudo);max-width:36ch;margin-bottom:1.1rem}
+
+    /* conversa de exemplo */
+    .chat{background:#e9e4d6;border-radius:14px;padding:.8rem .8rem .6rem;box-shadow:0 20px 40px -24px rgba(0,0,0,.6);position:relative}
+    .chat .cab{display:flex;align-items:center;gap:.6rem;padding:0 .2rem .6rem;border-bottom:1px solid rgba(0,0,0,.08);margin-bottom:.6rem;color:var(--tinta)}
+    .chat .cab .av{width:34px;height:34px;border-radius:50%;background:var(--verde-2);color:#fff;display:grid;place-items:center;font-family:var(--serif);font-size:1rem;flex:none}
+    .chat .cab b{display:block;font-size:.95rem;font-weight:600}
+    .chat .cab small{display:block;font-size:.75rem;color:var(--cinza)}
+    .chat .ex{position:absolute;right:.9rem;top:.9rem;font-size:.68rem;color:var(--cinza);background:rgba(255,255,255,.7);padding:.1rem .45rem;border-radius:4px}
+    .fio{display:flex;flex-direction:column;gap:.4rem;min-height:9.6rem}
+    .b{max-width:86%;padding:.45rem .7rem;border-radius:10px;font-size:.9rem;line-height:1.35;color:var(--tinta);background:#fff;align-self:flex-start;border-bottom-left-radius:3px;opacity:0;transform:translateY(8px);transition:opacity .35s ease,transform .35s ease}
+    .b.eu{background:var(--bolha);align-self:flex-end;border-bottom-left-radius:10px;border-bottom-right-radius:3px}
+    .b.on{opacity:1;transform:none}
+    .b time{display:block;font-size:.68rem;color:#7a7f75;text-align:right;margin-top:.15rem}
+    .dig{align-self:flex-start;background:#fff;border-radius:10px;padding:.6rem .8rem;display:none;gap:.25rem}
+    .dig.on{display:flex}
+    .dig i{width:7px;height:7px;border-radius:50%;background:#9aa094;animation:pt 1s infinite ease-in-out}
+    .dig i:nth-child(2){animation-delay:.15s}.dig i:nth-child(3){animation-delay:.3s}
+    @keyframes pt{0%,80%,100%{transform:translateY(0);opacity:.5}40%{transform:translateY(-4px);opacity:1}}
+
+    /* botão principal */
+    .cta{display:flex;align-items:center;justify-content:center;gap:.6rem;background:var(--whats);color:#06351a;text-decoration:none;font-weight:700;font-size:1.08rem;padding:1.05rem 1.2rem;border-radius:12px;margin-top:1.1rem;position:relative;box-shadow:0 10px 24px -10px rgba(37,211,102,.8);transition:transform .15s ease}
+    .cta:active{transform:scale(.98)}
+    .cta svg{width:24px;height:24px;fill:#06351a;flex:none}
+    .cta.pulsa::before{content:"";position:absolute;inset:-4px;border-radius:16px;border:2px solid var(--whats);animation:anel 2.4s ease-out 2;pointer-events:none}
+    @keyframes anel{0%{opacity:.9;transform:scale(1)}100%{opacity:0;transform:scale(1.08)}}
+    .sec{display:flex;justify-content:space-between;align-items:center;gap:1rem;margin-top:.8rem;font-size:.88rem;color:var(--verde-mudo)}
+    .sec a{color:var(--verde-texto)}
+    .fatos{list-style:none;margin:1.8rem 0 0;padding:1rem 0 0;border-top:1px solid rgba(255,255,255,.12);display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem;font-size:.85rem;color:var(--verde-mudo)}
+    .fatos b{display:block;font-family:var(--serif);font-weight:400;font-size:1.25rem;color:var(--verde-texto);margin-bottom:.1rem}
+
+    /* ---------- seções ---------- */
+    section{padding:2.6rem 0}
     .branco{background:var(--branco)}
-    .passos{list-style:none;margin:1rem 0 0;padding:0;display:grid;gap:1rem}
-    @media(min-width:700px){.passos{grid-template-columns:repeat(3,1fr)}}
-    .passos li{background:var(--branco);border:1px solid var(--filete);border-top:2px solid var(--dourado);padding:1.1rem 1.2rem}
-    .passos .n{font-family:var(--serif);color:var(--dourado);font-size:.9rem;letter-spacing:.1em;display:block;margin-bottom:.3rem}
-    .passos p{margin:0;font-size:.97rem;color:var(--suave)}
-    .preco{background:var(--pergaminho);border:1px solid #e3d5b8;padding:1.2rem 1.4rem;border-radius:6px;max-width:640px}
-    .preco b{font-family:var(--serif);font-size:1.25rem;font-weight:400;display:block;margin-bottom:.3rem}
-    .preco p{margin:0;color:var(--suave);font-size:.97rem}
-    .sit{list-style:none;margin:1rem 0 0;padding:0;display:grid;gap:.5rem .9rem;grid-template-columns:1fr 1fr}
-    @media(min-width:700px){.sit{grid-template-columns:repeat(4,1fr)}}
-    .sit li{background:var(--branco);border:1px solid var(--filete);padding:.75rem .9rem;font-size:.95rem}
-    .quem{display:grid;grid-template-columns:minmax(0,1fr);gap:1.2rem;align-items:start}
-    @media(min-width:700px){.quem{grid-template-columns:1fr 1fr}}
-    .cred{list-style:none;margin:0;padding:0;display:grid;gap:.4rem;font-size:.97rem;color:var(--suave)}
-    .cred li{border-top:1px solid var(--filete);padding-top:.5rem}
-    details{border-top:1px solid var(--filete);padding:.8rem 0}
-    details:last-of-type{border-bottom:1px solid var(--filete)}
-    summary{cursor:pointer;font-family:var(--serif);font-size:1.1rem;list-style:none;display:flex;justify-content:space-between;gap:1rem}
+    .lead{font-size:1.05rem;color:var(--cinza);max-width:40ch}
+
+    .passos{list-style:none;margin:1.4rem 0 0;padding:0;position:relative}
+    .passos::before{content:"";position:absolute;left:17px;top:10px;bottom:10px;width:2px;background:var(--linha)}
+    .passos::after{content:"";position:absolute;left:17px;top:10px;width:2px;height:0;background:var(--ouro);transition:height 1.6s cubic-bezier(.4,0,.2,1)}
+    .passos.on::after{height:calc(100% - 20px)}
+    .passos li{position:relative;padding:0 0 1.5rem 3.1rem}
+    .passos li:last-child{padding-bottom:0}
+    .passos .n{position:absolute;left:0;top:0;width:36px;height:36px;border-radius:50%;background:var(--branco);border:2px solid var(--linha);display:grid;place-items:center;font-family:var(--serif);color:var(--ouro);transition:border-color .4s,background .4s,color .4s}
+    .passos.on .n{border-color:var(--ouro);background:var(--ouro);color:#fff}
+    .passos.on li:nth-child(2) .n{transition-delay:.6s}.passos.on li:nth-child(3) .n{transition-delay:1.2s}
+    .passos p{margin:0;color:var(--cinza);font-size:.98rem}
+
+    .preco{background:var(--branco);border:1px solid var(--linha);border-left:4px solid var(--ouro);padding:1.1rem 1.2rem;border-radius:0 8px 8px 0}
+    .preco b{font-family:var(--serif);font-weight:400;font-size:1.3rem;display:block;margin-bottom:.35rem}
+    .preco p{margin:0;color:var(--cinza);font-size:.97rem}
+
+    .sit{list-style:none;margin:1rem 0 0;padding:0;display:flex;flex-wrap:wrap;gap:.5rem}
+    .sit li{background:var(--branco);border:1px solid var(--linha);border-radius:999px;padding:.45rem .9rem;font-size:.93rem}
+
+    .quem{display:grid;grid-template-columns:96px minmax(0,1fr);gap:1rem;align-items:start}
+    .quem img{border-radius:8px;aspect-ratio:4/5;object-fit:cover;width:96px;height:auto}
+    .quem p{font-size:.98rem;color:var(--cinza)}
+    .cred{list-style:none;margin:1rem 0 0;padding:0;font-size:.93rem;color:var(--cinza)}
+    .cred li{border-top:1px solid var(--linha);padding:.5rem 0}
+
+    details{border-top:1px solid var(--linha)}
+    details:last-of-type{border-bottom:1px solid var(--linha)}
+    summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:1rem;align-items:center;padding:.9rem 0;font-family:var(--serif);font-size:1.08rem}
     summary::-webkit-details-marker{display:none}
-    summary::after{content:"+";color:var(--dourado);flex:none}
-    details[open] summary::after{content:"–"}
-    details p{margin:.6rem 0 0;color:var(--suave);font-size:.97rem;max-width:none}
+    summary::after{content:"";width:10px;height:10px;border-right:2px solid var(--ouro);border-bottom:2px solid var(--ouro);transform:rotate(45deg);transition:transform .25s;flex:none;margin-right:.3rem}
+    details[open] summary::after{transform:rotate(-135deg)}
+    .resp{display:grid;grid-template-rows:0fr;transition:grid-template-rows .3s ease}
+    details[open] .resp{grid-template-rows:1fr}
+    .resp>p{overflow:hidden;margin:0;padding-bottom:0;color:var(--cinza);font-size:.97rem;transition:padding .3s}
+    details[open] .resp>p{padding-bottom:1rem}
+
     .contato{background:var(--verde);color:var(--verde-texto)}
-    .contato h2,.contato a{color:var(--verde-texto)}
-    .contato .btn{background:#d1b47a;color:var(--verde);box-shadow:none}
-    .contato .btn svg{fill:var(--verde)}
-    .contato .btn:hover{background:#e0c48a}
-    .contato ul{list-style:none;padding:0;margin:1.2rem 0 0;display:grid;gap:.7rem;font-size:.97rem}
-    .contato li b{display:block;font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:#d1b47a;font-weight:400}
-    .crise{background:#fff4d6;border:1px solid #ecd79a;border-radius:6px;padding:.9rem 1.1rem;font-size:.92rem;color:#5a4300;margin-top:1.4rem;max-width:640px}
-    footer{padding:1.6rem 0 1.2rem;font-size:.82rem;color:var(--suave)}
-    footer p{max-width:none;margin:0 0 .4rem}
-    .fixa{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--whats);color:#fff;text-align:center;text-decoration:none;font-weight:700;padding:1rem 1rem calc(1rem + env(safe-area-inset-bottom));box-shadow:0 -4px 16px rgba(0,0,0,.15)}
-    @media(min-width:760px){.fixa{display:none}body{padding-bottom:0}}
+    .contato h2{color:var(--verde-texto)}
+    .contato p{color:var(--verde-mudo)}
+    .contato a{color:var(--verde-texto)}
+    .contato ul{list-style:none;padding:0;margin:1.4rem 0 0;display:grid;gap:.9rem;font-size:.95rem}
+    .contato li b{display:block;font-weight:600;color:var(--verde-texto);margin-bottom:.1rem}
+    .crise{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:8px;padding:.9rem 1rem;font-size:.9rem;color:var(--verde-mudo);margin-top:1.4rem}
+    footer{padding:1.4rem 0 1rem;font-size:.8rem;color:var(--cinza)}
+    footer p{margin:0 0 .35rem}
+
+    /* barra fixa */
+    .fixa{position:fixed;left:.75rem;right:.75rem;bottom:.75rem;z-index:50;display:flex;align-items:center;justify-content:center;gap:.5rem;background:var(--whats);color:#06351a;font-weight:700;text-decoration:none;padding:.95rem 1rem;border-radius:12px;box-shadow:0 12px 30px -8px rgba(0,0,0,.45);transform:translateY(130%);transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+    .fixa.on{transform:none}
+    .fixa svg{width:22px;height:22px;fill:#06351a}
+
+    @media(min-width:760px){
+      .c{width:min(100% - 3rem,760px)}
+      .hero{padding:3rem 0 3.2rem}
+      .hero .c{display:grid;grid-template-columns:1.1fr 1fr;gap:2.5rem;align-items:center}
+      .hero h1{font-size:2.9rem}
+      .fatos{grid-column:1/-1}
+      .quem{grid-template-columns:140px minmax(0,1fr)}
+      .quem img{width:140px}
+      .fixa{display:none}
+      body{padding-bottom:0}
+    }
+    @media(prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      .b{opacity:1;transform:none;transition:none}
+      .dig{display:none!important}
+      .cta.pulsa::before{animation:none}
+      .passos::after{transition:none}
+      .fixa{transition:none}
+      .resp{transition:none}
+    }
   </style>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"Physician","name":"Dr. Alex Fabrício de Oliveira","url":"https://dralexfabricio.com.br/consulta/","image":"https://dralexfabricio.com.br/assets/retrato.jpg","medicalSpecialty":"Psychiatric","isAcceptingNewPatients":true,
@@ -105,136 +169,165 @@
 <body>
 
 <div class="topo"><div class="c">
-  <svg viewBox="0 0 64 64" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="32" cy="31" r="22"/><rect x="12" y="12" width="40" height="40"/><circle cx="32" cy="17" r="3.2"/><path d="M32 20v18M24 24h16M32 38l-8 14M32 38l8 14M24 24L14 16M40 24l10-8"/></g></svg>
-  <span>Dr. Alex Fabrício de Oliveira</span>
+  <svg viewBox="0 0 64 64" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="32" cy="31" r="22"/><rect x="12" y="12" width="40" height="40"/><circle cx="32" cy="17" r="3.2"/><path d="M32 20v18M24 24h16M32 38l-8 14M32 38l8 14M24 24L14 16M40 24l10-8"/></g></svg>
+  <div>Dr. Alex Fabrício de Oliveira<small>Médico, CRM/MG 51545. Psiquiatra, RQE 27461</small></div>
 </div></div>
 
 <main>
   <div class="hero"><div class="c">
     <div>
-      <p class="ident">Médico · CRM/MG 51545 · Psiquiatra · RQE 27461</p>
-      <h1 id="titulo">Psiquiatra em Ubá/MG: consulta de uma hora, presencial ou por vídeo</h1>
-      <p class="lead" id="lead">Uma hora inteira para ouvir a sua história, entender o que está acontecendo e explicar, em linguagem simples, o que pode ser feito. Para adultos, adolescentes e idosos.</p>
-      <div class="acoes">
-        <a class="btn" data-conv="whatsapp" href="https://wa.me/5532998462999?text=Ol%C3%A1%2C%20vim%20pelo%20site%20do%20Dr.%20Alex%20Fabr%C3%ADcio%20e%20quero%20marcar%20uma%20consulta." rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4.1c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg>Falar com a secretaria no WhatsApp</a>
-        <a class="lig" data-conv="telefone" href="tel:+5532998462999">ou ligue (32) 99846-2999</a>
-      </div>
-      <p class="nota">Quem responde é a secretaria, de segunda a sexta, em horário comercial. Você recebe os horários disponíveis e as orientações, sem compromisso.</p>
-      <ul class="pontos" aria-label="Em resumo">
-        <li>Residência em Psiquiatria pela UFRJ</li>
-        <li>Em consultório desde 2006</li>
-        <li>Professor de psiquiatria no UNIFAGOC</li>
-        <li id="ponto-local">Centro de Ubá, em frente à Unimed</li>
-      </ul>
+      <h1 id="titulo">Uma hora inteira com um psiquiatra que explica.</h1>
+      <p class="sub" id="sub">Em Ubá ou por vídeo, para adultos, adolescentes e idosos. Você escreve, a secretaria responde com os horários.</p>
     </div>
-    <figure>
-      <img src="../assets/retrato.jpg" srcset="../assets/retrato.jpg 1x, ../assets/retrato@2x.jpg 2x" width="800" height="1000" alt="Dr. Alex Fabrício de Oliveira, psiquiatra em Ubá/MG" fetchpriority="high">
-      <figcaption>Dr. Alex Fabrício de Oliveira</figcaption>
-    </figure>
+    <div>
+      <div class="chat" aria-label="Exemplo de como é marcar pelo WhatsApp">
+        <span class="ex">exemplo</span>
+        <div class="cab"><span class="av" aria-hidden="true">A</span><div><b>Secretaria do Dr. Alex</b><small>responde em horário comercial</small></div></div>
+        <div class="fio" id="fio">
+          <div class="b eu">Oi, vim pelo site do Dr. Alex. Quero marcar uma consulta.<time>14:02</time></div>
+          <div class="dig" id="dig" aria-hidden="true"><i></i><i></i><i></i></div>
+          <div class="b">Olá! Temos quinta às 9h ou sexta às 14h. Presencial ou por vídeo?<time>14:04</time></div>
+          <div class="b eu">Quinta, por vídeo.<time>14:05</time></div>
+          <div class="b">Marcado. Já te mando as orientações.<time>14:05</time></div>
+        </div>
+      </div>
+      <a class="cta" id="cta" data-conv="whatsapp" href="https://wa.me/5532998462999?text=Oi%2C%20vim%20pelo%20site%20do%20Dr.%20Alex.%20Quero%20marcar%20uma%20consulta." rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4.1c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg>Começar a conversa no WhatsApp</a>
+      <div class="sec"><span>Sem compromisso. Você decide depois de ver os horários.</span><a data-conv="telefone" href="tel:+5532998462999">Ligar</a></div>
+    </div>
+    <ul class="fatos">
+      <li><b>1 hora</b>de consulta, sem pressa</li>
+      <li><b>Desde 2006</b>em consultório</li>
+      <li><b id="fato-local">Ubá</b><span id="fato-local-sub">ou por vídeo</span></li>
+    </ul>
   </div></div>
 
-  <section><div class="c">
-    <h2>Quanto custa e como pagar</h2>
-    <div class="preco">
-      <b>Consulta particular de uma hora</b>
-      <!-- data-fill="valor": quando o Dr. Alex autorizar, trocar por "R$ ___ a consulta. Pix e cartão. Recibo para reembolso." -->
-      <p data-fill="valor">O valor e as formas de pagamento (Pix e cartão) são informados pela secretaria antes de marcar, sem compromisso. O consultório não trabalha com convênios; a consulta gera recibo para pedido de reembolso ao plano.</p>
-    </div>
-  </div></section>
-
   <section class="branco"><div class="c">
-    <h2>Como é a primeira consulta</h2>
-    <ol class="passos">
-      <li><span class="n">1. Você escreve</span><h3>Pelo WhatsApp da secretaria</h3><p>Recebe as opções de dia e horário, presencial em Ubá ou por vídeo, e as orientações práticas. Sem formulário, sem fila.</p></li>
-      <li><span class="n">2. A consulta</span><h3>Uma hora de conversa</h3><p>Sua história, o que você sente hoje, o que já tentou. Nenhum exame invasivo. Exames e receitas antigas ajudam, mas não são obrigatórios.</p></li>
-      <li><span class="n">3. O plano</span><h3>Decidido junto com você</h3><p>O que está acontecendo e as opções, explicadas sem jargão. Remédio não é automático: quando indicado, o Dr. Alex explica por quê, por quanto tempo e os efeitos possíveis.</p></li>
+    <h2>O que acontece depois que você escreve</h2>
+    <ol class="passos" id="passos">
+      <li><span class="n">1</span><h3>A secretaria responde com os horários</h3><p>Presencial em Ubá ou por vídeo. Você escolhe o que cabe na sua semana e recebe as orientações.</p></li>
+      <li><span class="n">2</span><h3>Uma hora de conversa com o Dr. Alex</h3><p>Sua história, o que você sente hoje, o que já tentou. Sem exame invasivo e sem jargão.</p></li>
+      <li><span class="n">3</span><h3>Um plano que você entende</h3><p>O que está acontecendo e as opções. Remédio não é automático: quando indicado, ele explica por quê, por quanto tempo e os efeitos possíveis.</p></li>
     </ol>
   </div></section>
 
   <section><div class="c">
-    <h2>Situações em que vale marcar</h2>
+    <h2>Quanto custa</h2>
+    <div class="preco">
+      <b>Consulta particular de uma hora</b>
+      <!-- data-fill="valor": quando o Dr. Alex autorizar, trocar por "R$ ___. Pix e cartão. Recibo para reembolso." -->
+      <p data-fill="valor">A secretaria informa o valor e as formas de pagamento (Pix e cartão) antes de marcar. Sem convênios. A consulta gera recibo para pedir reembolso ao seu plano.</p>
+    </div>
+  </div></section>
+
+  <section class="branco"><div class="c">
+    <h2>Vale marcar quando</h2>
     <p class="lead">Você não precisa ter certeza do que está acontecendo. Descobrir isso é parte da consulta.</p>
     <ul class="sit">
-      <li>Ansiedade e crises de pânico</li>
-      <li>Tristeza que não passa</li>
-      <li>Insônia</li>
-      <li>Dificuldade de atenção</li>
-      <li>Oscilações de humor</li>
-      <li>Luto, separação, esgotamento</li>
-      <li>Medicação que não está funcionando</li>
-      <li>Segunda opinião</li>
+      <li>Ansiedade ou crises de pânico</li><li>Tristeza que não passa</li><li>Insônia</li><li>Dificuldade de atenção</li><li>Humor que oscila</li><li>Luto, separação, esgotamento</li><li>Remédio que não está funcionando</li><li>Segunda opinião</li>
     </ul>
   </div></section>
 
-  <section class="branco"><div class="c quem">
-    <div>
-      <h2>Quem atende</h2>
-      <p>Dr. Alex Fabrício de Oliveira, médico psiquiatra, atende em Ubá desde 2006 e dá aula de psiquiatria e comunicação clínica no curso de medicina do UNIFAGOC. A agenda é reduzida de propósito, para que cada consulta tenha uma hora.</p>
-      <a class="btn" data-conv="whatsapp" href="https://wa.me/5532998462999?text=Ol%C3%A1%2C%20vim%20pelo%20site%20do%20Dr.%20Alex%20Fabr%C3%ADcio%20e%20quero%20marcar%20uma%20consulta." rel="noopener">Marcar pelo WhatsApp</a>
+  <section><div class="c">
+    <h2>Quem vai te atender</h2>
+    <div class="quem">
+      <img src="../assets/retrato.jpg" srcset="../assets/retrato.jpg 1x, ../assets/retrato@2x.jpg 2x" width="800" height="1000" alt="Dr. Alex Fabrício de Oliveira, psiquiatra em Ubá/MG" loading="lazy">
+      <div>
+        <p>Dr. Alex Fabrício de Oliveira é médico psiquiatra, atende em Ubá desde 2006 e dá aula de psiquiatria e comunicação clínica no curso de medicina do UNIFAGOC. A agenda é reduzida de propósito, para cada consulta ter uma hora.</p>
+      </div>
     </div>
     <ul class="cred">
       <li>Medicina pela Universidade Federal de Juiz de Fora, 2002</li>
       <li>Residência em Psiquiatria pela Universidade Federal do Rio de Janeiro, 2005</li>
       <li>Mestre em Filosofia pela Unesp, 2010</li>
       <li>Professor de psiquiatria no UNIFAGOC, em Ubá, desde 2017</li>
-      <li>Médico, CRM/MG 51545 · Psiquiatra, RQE 27461</li>
+      <li>Médico, CRM/MG 51545. Psiquiatra, RQE 27461</li>
     </ul>
   </div></section>
 
-  <section><div class="c">
+  <section class="branco"><div class="c">
     <h2>Dúvidas comuns</h2>
-    <details open><summary>Psiquiatra ou psicólogo?</summary><p>O psiquiatra é médico: avalia, diagnostica e, quando necessário, prescreve medicação. O psicólogo faz psicoterapia. Muitas pessoas se beneficiam dos dois, e o Dr. Alex trabalha em conjunto com o psicólogo que você já tiver. Se estiver em dúvida por onde começar, a consulta psiquiátrica serve para entender o que está acontecendo e indicar o caminho.</p></details>
-    <details><summary>Preciso de encaminhamento?</summary><p>Não. É só escrever para a secretaria.</p></details>
-    <details><summary>Vou sair com receita?</summary><p>Só se houver indicação, e sempre com explicação do porquê, da duração e dos efeitos possíveis. Muitas consultas terminam sem receita.</p></details>
-    <details><summary>A consulta por vídeo serve para a primeira vez?</summary><p>Sim. Segue as normas do CFM e tem a mesma duração. Ajuda quem mora em cidades vizinhas ou tem dificuldade de deslocamento.</p></details>
-    <details><summary>Atende adolescentes e idosos?</summary><p>Sim. Adolescentes com a participação da família, no que for combinado. Para idosos, o acompanhamento inclui memória, humor e sono. Crianças são encaminhadas a colegas especializados.</p></details>
-    <details><summary>Quanto tempo até a primeira vaga?</summary><p>A secretaria informa na hora, pelo WhatsApp. Como a agenda é reduzida, vale escrever assim que decidir.</p></details>
-    <details><summary>É sigiloso?</summary><p>Sim. Tudo o que você contar fica sob sigilo médico, inclusive o contato com a secretaria.</p></details>
+    <details open><summary>Psiquiatra ou psicólogo?</summary><div class="resp"><p>O psiquiatra é médico: avalia, diagnostica e, quando necessário, prescreve medicação. O psicólogo faz psicoterapia. Muita gente se beneficia dos dois, e o Dr. Alex trabalha junto com o psicólogo que você já tiver. Se está em dúvida por onde começar, a consulta serve para entender o que está acontecendo e indicar o caminho.</p></div></details>
+    <details><summary>Preciso de encaminhamento?</summary><div class="resp"><p>Não. É só escrever para a secretaria.</p></div></details>
+    <details><summary>Vou sair com receita?</summary><div class="resp"><p>Só se houver indicação, e sempre com a explicação do porquê, da duração e dos efeitos possíveis. Muitas consultas terminam sem receita.</p></div></details>
+    <details><summary>A consulta por vídeo serve para a primeira vez?</summary><div class="resp"><p>Sim. Segue as normas do CFM e tem a mesma duração. Ajuda quem mora em cidades vizinhas ou tem dificuldade de deslocamento.</p></div></details>
+    <details><summary>Atende adolescentes e idosos?</summary><div class="resp"><p>Sim. Adolescentes com a participação da família, no que for combinado. Para idosos, o acompanhamento inclui memória, humor e sono. Crianças são encaminhadas a colegas especializados.</p></div></details>
+    <details><summary>Quanto tempo até a primeira vaga?</summary><div class="resp"><p>A secretaria informa na hora, pelo WhatsApp. Como a agenda é reduzida, vale escrever assim que decidir.</p></div></details>
+    <details><summary>É sigiloso?</summary><div class="resp"><p>Sim. Tudo o que você contar fica sob sigilo médico, inclusive o contato com a secretaria.</p></div></details>
   </div></section>
 
   <section class="contato" id="contato"><div class="c">
-    <h2>Marcar uma consulta</h2>
-    <p>Escreva ou ligue para a secretaria. Você recebe os horários e as orientações para o primeiro dia.</p>
-    <a class="btn" data-conv="whatsapp" href="https://wa.me/5532998462999?text=Ol%C3%A1%2C%20vim%20pelo%20site%20do%20Dr.%20Alex%20Fabr%C3%ADcio%20e%20quero%20marcar%20uma%20consulta." rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4.1c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg>Falar com a secretaria no WhatsApp</a>
+    <h2>Pronto para marcar?</h2>
+    <p>Escreva para a secretaria. Em horário comercial, a resposta vem rápido, com os horários e as orientações.</p>
+    <a class="cta" data-conv="whatsapp" href="https://wa.me/5532998462999?text=Oi%2C%20vim%20pelo%20site%20do%20Dr.%20Alex.%20Quero%20marcar%20uma%20consulta." rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4.1c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg>Começar a conversa no WhatsApp</a>
     <ul>
       <li><b>Consultório</b>Rua Coronel Júlio Soares, 151-B, Centro, Ubá/MG. Em frente à Unimed-Ubá, na clínica UNNA Medicina. <a data-conv="mapa" href="https://www.google.com/maps/search/?api=1&query=Rua+Coronel+J%C3%BAlio+Soares%2C+151-B%2C+Centro%2C+Ub%C3%A1+-+MG" rel="noopener">Ver no mapa</a></li>
       <li><b>Telefone e WhatsApp</b><a data-conv="telefone" href="tel:+5532998462999">(32) 99846-2999</a>, secretaria</li>
       <li><b>Horário</b>Segunda a sexta, das 7h30 às 11h30 e das 13h às 17h</li>
-      <li><b>Atendimento</b>Particular, sem convênios. Presencial ou por vídeo</li>
     </ul>
     <div class="crise">Este canal não atende urgências. Em situação de risco, procure um pronto-socorro ou ligue 192 (SAMU). O CVV atende 24 horas pelo 188.</div>
   </div></section>
 </main>
 
 <footer><div class="c">
-  <p>Dr. Alex Fabrício de Oliveira · Médico · CRM/MG 51545 · Psiquiatra · RQE 27461</p>
+  <p>Dr. Alex Fabrício de Oliveira. Médico, CRM/MG 51545. Psiquiatra, RQE 27461.</p>
   <p>Conteúdo informativo, em conformidade com a Resolução CFM 2.336/2023. Não substitui consulta médica. <a href="../privacidade.html">Aviso de privacidade</a>.</p>
 </div></footer>
 
-<a class="fixa" data-conv="whatsapp" href="https://wa.me/5532998462999?text=Ol%C3%A1%2C%20vim%20pelo%20site%20do%20Dr.%20Alex%20Fabr%C3%ADcio%20e%20quero%20marcar%20uma%20consulta." rel="noopener">Falar com a secretaria no WhatsApp</a>
+<a class="fixa" id="fixa" data-conv="whatsapp" href="https://wa.me/5532998462999?text=Oi%2C%20vim%20pelo%20site%20do%20Dr.%20Alex.%20Quero%20marcar%20uma%20consulta." rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4.1c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg>Falar com a secretaria</a>
 
 <script>
 (function () {
-  // Cidade no título, só da lista. Ex.: /consulta/?cidade=visconde-do-rio-branco
+  var reduz = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Cidade no título, só da lista. Ex.: /consulta/?cidade=tocantins
   var CIDADES = {
-    'uba': ['Ubá', 'Centro de Ubá, em frente à Unimed'],
-    'visconde-do-rio-branco': ['Visconde do Rio Branco', 'Consultório em Ubá, a 16 km, ou por vídeo'],
-    'tocantins': ['Tocantins', 'Consultório em Ubá, a 10 km, ou por vídeo'],
-    'guidoval': ['Guidoval', 'Consultório em Ubá, a 16 km, ou por vídeo'],
-    'rodeiro': ['Rodeiro', 'Consultório em Ubá, a 13 km, ou por vídeo'],
-    'divinesia': ['Divinésia', 'Consultório em Ubá, a 14 km, ou por vídeo'],
-    'pirauba': ['Piraúba', 'Consultório em Ubá, a 20 km, ou por vídeo'],
-    'juiz-de-fora': ['Juiz de Fora', 'Consulta por vídeo, ou presencial em Ubá'],
-    'online': ['', 'Consulta por vídeo para todo o Brasil, ou presencial em Ubá']
+    'uba': ['Ubá', 'ou por vídeo', null],
+    'visconde-do-rio-branco': ['Visconde do Rio Branco', 'a 16 km, ou por vídeo', 'Consultório em Ubá, a 16 km de Visconde do Rio Branco, ou consulta por vídeo. Para adultos, adolescentes e idosos.'],
+    'tocantins': ['Tocantins', 'a 10 km, ou por vídeo', 'Consultório em Ubá, a 10 km de Tocantins, ou consulta por vídeo. Para adultos, adolescentes e idosos.'],
+    'guidoval': ['Guidoval', 'a 16 km, ou por vídeo', 'Consultório em Ubá, a 16 km de Guidoval, ou consulta por vídeo. Para adultos, adolescentes e idosos.'],
+    'rodeiro': ['Rodeiro', 'a 13 km, ou por vídeo', 'Consultório em Ubá, a 13 km de Rodeiro, ou consulta por vídeo. Para adultos, adolescentes e idosos.'],
+    'divinesia': ['Divinésia', 'a 14 km, ou por vídeo', 'Consultório em Ubá, a 14 km de Divinésia, ou consulta por vídeo. Para adultos, adolescentes e idosos.'],
+    'pirauba': ['Piraúba', 'a 20 km, ou por vídeo', 'Consultório em Ubá, a 20 km de Piraúba, ou consulta por vídeo. Para adultos, adolescentes e idosos.'],
+    'juiz-de-fora': ['Por vídeo', 'ou presencial em Ubá', 'Consulta por vídeo, de Juiz de Fora ou de onde você estiver, ou presencial em Ubá. Para adultos, adolescentes e idosos.'],
+    'online': ['Por vídeo', 'ou presencial em Ubá', 'Consulta por vídeo, de onde você estiver, ou presencial em Ubá. Para adultos, adolescentes e idosos.']
   };
   var q = new URLSearchParams(location.search).get('cidade');
   if (q && CIDADES[q]) {
-    var nome = CIDADES[q][0], t = document.getElementById('titulo'), p = document.getElementById('ponto-local');
-    if (q === 'online') t.textContent = 'Psiquiatra por vídeo: consulta de uma hora, de onde você estiver';
-    else if (q !== 'uba') t.textContent = 'Psiquiatra para quem mora em ' + nome + ': consulta de uma hora, em Ubá ou por vídeo';
-    if (p) p.textContent = CIDADES[q][1];
+    var c = CIDADES[q];
+    document.getElementById('fato-local').textContent = c[0];
+    document.getElementById('fato-local-sub').textContent = c[1];
+    if (c[2]) document.getElementById('sub').textContent = c[2] + ' Você escreve, a secretaria responde com os horários.';
   }
-  // Conversão do Google Ads: chama gtag_report_conversion se a tag estiver instalada (ver comentário no <head>).
+
+  // Conversa de exemplo que se escreve sozinha (uma vez, ao abrir)
+  var bolhas = [].slice.call(document.querySelectorAll('#fio .b')), dig = document.getElementById('dig'), cta = document.getElementById('cta');
+  function mostra(i) {
+    if (i >= bolhas.length) { if (!reduz) cta.classList.add('pulsa'); return; }
+    var b = bolhas[i], minha = b.classList.contains('eu');
+    if (!minha) { dig.classList.add('on'); }
+    setTimeout(function () {
+      dig.classList.remove('on');
+      b.classList.add('on');
+      setTimeout(function () { mostra(i + 1); }, minha ? 900 : 1300);
+    }, minha ? 500 : 1400);
+  }
+  if (reduz) { bolhas.forEach(function (b) { b.classList.add('on'); }); }
+  else { setTimeout(function () { mostra(0); }, 600); }
+
+  // Linha dos passos se desenha quando entra na tela
+  var passos = document.getElementById('passos');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { passos.classList.add('on'); io.disconnect(); } }); }, { threshold: .35 });
+    io.observe(passos);
+  } else passos.classList.add('on');
+
+  // Barra fixa aparece depois que o botão do herói sai da tela
+  var fixa = document.getElementById('fixa');
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function (es) { fixa.classList.toggle('on', !es[0].isIntersecting && es[0].boundingClientRect.top < 0); }, { threshold: 0 }).observe(cta);
+  } else fixa.classList.add('on');
+
+  // Conversão do Google Ads: chama gtag_report_conversion se a tag estiver instalada
   document.querySelectorAll('[data-conv]').forEach(function (a) {
     a.addEventListener('click', function () {
       try { if (typeof window.gtag_report_conversion === 'function') window.gtag_report_conversion(a.href, a.getAttribute('data-conv')); } catch (e) {}
