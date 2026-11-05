@@ -155,7 +155,16 @@
       "name": "Revisão de tratamento em curso e segunda opinião"
     }
   ],
-  "paymentAccepted": "Particular"
+  "paymentAccepted": "Particular",
+  "potentialAction": {
+    "@type": "ReserveAction",
+    "name": "Agendar consulta online",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://medbook.com.br/dralexfabricio",
+      "actionPlatform": ["http://schema.org/DesktopWebPlatform", "http://schema.org/MobileWebPlatform"]
+    }
+  }
 }
   </script>
   <script type="application/ld+json">
@@ -276,9 +285,10 @@
         <p class="lead">Uma hora inteira de consulta para ouvir a sua história, entender o que está acontecendo e explicar, em linguagem clara, o que pode ser feito. Presencial em Ubá ou por vídeo.</p>
         <div class="hero-acoes">
           <a class="botao cheio whats" data-fill="whatsapp" href="https://wa.me/5532998462999?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Dr.%20Alex%20Fabr%C3%ADcio." rel="noopener">Agendar pelo WhatsApp</a>
+          <a class="botao" data-fill="agendamento" href="https://medbook.com.br/dralexfabricio" rel="noopener">Agendar online</a>
           <a class="link-discreto" href="#atendimento">Como é a consulta</a>
         </div>
-        <p class="nota">Quem responde é a secretária, de segunda a sexta, em horário comercial.</p>
+        <p class="nota">Quem responde é a secretária, de segunda a sexta, em horário comercial. Na agenda online você escolhe o horário na hora.</p>
         <ul class="confianca" aria-label="Em resumo">
           <li>Residência em Psiquiatria pela UFRJ</li>
           <li>Em consultório desde 2006</li>
@@ -418,7 +428,7 @@
         <p class="lead">Consultas presenciais, em Ubá/MG,<span data-fill="teleconsulta"> ou por vídeo,</span> sempre com a mesma duração e o mesmo cuidado. O atendimento é particular, sem convênios.</p>
       </div>
       <ol class="etapas revela">
-        <li><span class="num">1. Você escreve</span><h3>Pelo WhatsApp da secretária</h3><p>Você recebe as opções de dia e horário, presencial ou por vídeo, e as orientações práticas. Sem formulário e sem espera na linha.</p></li>
+        <li><span class="num">1. Você marca</span><h3>Pelo WhatsApp da secretária ou pela agenda online</h3><p>Pelo WhatsApp, você recebe as opções de dia e horário, presencial ou por vídeo, e as orientações práticas. Se preferir, <a data-fill="agendamento" href="https://medbook.com.br/dralexfabricio" rel="noopener">escolha o horário na agenda online</a>, a qualquer hora.</p></li>
         <li><span class="num">2. A consulta</span><h3>Uma hora de conversa</h3><p>Sua história, o que você sente hoje, o que já tentou. Exames, receitas e relatórios de outros profissionais são bem-vindos, mas não obrigatórios.</p></li>
         <li><span class="num">3. O plano</span><h3>Que você entende e ajuda a decidir</h3><p>Hipóteses e opções explicadas com clareza. O tratamento, com ou sem medicação, é decidido junto e revisto nos retornos.</p></li>
       </ol>
@@ -461,10 +471,11 @@
       <div class="revela">
         <span class="eyebrow">Agendamento</span>
         <h2 id="t-contato">Marcar uma consulta</h2>
-        <p>Escreva ou ligue para a secretária. Você recebe as opções de horário e as orientações para o primeiro dia, sem compromisso.</p>
+        <p>Escreva ou ligue para a secretária, ou escolha o horário na agenda online. Você recebe as orientações para o primeiro dia, sem compromisso.</p>
         <div class="hero-acoes">
           <!-- WhatsApp da secretária para agendamento: (32) 99846-2999 -->
           <a class="botao cheio whats" data-fill="whatsapp" href="https://wa.me/5532998462999?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Dr.%20Alex%20Fabr%C3%ADcio." rel="noopener">Agendar pelo WhatsApp</a>
+          <a class="botao" data-fill="agendamento" href="https://medbook.com.br/dralexfabricio" rel="noopener">Agendar online</a>
           <a class="botao so-com-email" href="mailto:contato@dralexfabricio.com.br">Escrever e-mail</a>
         </div>
         <p class="aviso">Este canal não atende urgências. Em situação de risco, procure um pronto-socorro ou ligue 192 (SAMU). O CVV atende 24 horas pelo 188.</p>
@@ -472,6 +483,7 @@
       <ul class="dados revela">
         <li><span class="rotulo">Consultório</span><span class="valor" data-fill="endereco">Rua Coronel Júlio Soares, 151-B, Centro<br>Ubá/MG, CEP 36500-051<br>Em frente à Unimed-Ubá, na clínica UNNA Medicina<br><a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Rua+Coronel+J%C3%BAlio+Soares%2C+151-B%2C+Centro%2C+Ub%C3%A1+-+MG" rel="noopener">Ver no mapa</a></span></li>
         <li><span class="rotulo">WhatsApp e telefone</span><span class="valor" data-fill="telefone"><a href="tel:+5532998462999">(32) 99846-2999</a><br><small>Secretária, para agendamento</small></span></li>
+        <li><span class="rotulo">Agendamento online</span><span class="valor"><a data-fill="agendamento" href="https://medbook.com.br/dralexfabricio" rel="noopener">medbook.com.br/dralexfabricio</a><br><small>Escolha o dia e o horário, a qualquer hora</small></span></li>
         <li><span class="rotulo">Horário de atendimento</span><span class="valor" data-fill="horario">Segunda a sexta, das 7h30 às 11h30 e das 13h às 17h</span></li>
         <li><span class="rotulo">Atendimento</span><span class="valor">Particular, sem convênios. Consultas de uma hora</span></li>
         <li class="so-com-email"><span class="rotulo">E-mail</span><span class="valor"><a data-fill="email" href="mailto:contato@dralexfabricio.com.br">contato@dralexfabricio.com.br</a></span></li>

@@ -80,6 +80,9 @@
     @keyframes anel{0%{opacity:.9;transform:scale(1)}100%{opacity:0;transform:scale(1.08)}}
     .sec{display:flex;justify-content:space-between;align-items:center;gap:1rem;margin-top:.8rem;font-size:.88rem;color:var(--verde-mudo)}
     .sec a{color:var(--verde-texto)}
+    .sec-links{display:flex;gap:1rem;flex:none}
+    .agenda-online{margin:.9rem 0 0;font-size:.95rem;color:var(--verde-mudo)}
+    .agenda-online a{color:var(--verde-texto);text-decoration:underline;text-underline-offset:3px}
     .fatos{list-style:none;margin:1.8rem 0 0;padding:1rem 0 0;border-top:1px solid rgba(255,255,255,.12);display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem;font-size:.85rem;color:var(--verde-mudo)}
     .fatos b{display:block;font-family:var(--serif);font-weight:400;font-size:1.25rem;color:var(--verde-texto);margin-bottom:.1rem}
 
@@ -193,7 +196,7 @@
         </div>
       </div>
       <a class="cta" id="cta" data-conv="whatsapp" href="https://wa.me/5532998462999?text=Oi%2C%20vim%20pelo%20site%20do%20Dr.%20Alex.%20Quero%20marcar%20uma%20consulta." rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4.1c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg>Começar a conversa no WhatsApp</a>
-      <div class="sec"><span>Sem compromisso. Você decide depois de ver os horários.</span><a data-conv="telefone" href="tel:+5532998462999">Ligar</a></div>
+      <div class="sec"><span>Sem compromisso. Você decide depois de ver os horários.</span><span class="sec-links"><a data-conv="agendamento" data-fill="agendamento" href="https://medbook.com.br/dralexfabricio" rel="noopener">Agendar online</a><a data-conv="telefone" href="tel:+5532998462999">Ligar</a></span></div>
     </div>
     <ul class="fatos">
       <li><b>1 hora</b>de consulta, sem pressa</li>
@@ -258,9 +261,9 @@
   <section class="contato" id="contato"><div class="c">
     <h2>Pronto para marcar?</h2>
     <p>Escreva pelo WhatsApp. Em horário comercial, a resposta vem rápido, com os horários e as orientações.</p>
-    <!-- Agendamento online (pedido do Alex no grupo, 27/10): quando ele mandar o link, colocar no href e tirar o hidden. Fica abaixo do WhatsApp, para quem já é paciente. -->
-    <p class="agenda-online" hidden><a data-fill="agendamento" href="" rel="noopener">Já é paciente? Agendar online</a></p>
     <a class="cta" data-conv="whatsapp" href="https://wa.me/5532998462999?text=Oi%2C%20vim%20pelo%20site%20do%20Dr.%20Alex.%20Quero%20marcar%20uma%20consulta." rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4.1c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg>Começar a conversa no WhatsApp</a>
+    <!-- Agendamento online (MedBook, link do Alex em 29/10; endereço novo aprovado lá em 05/11) -->
+    <p class="agenda-online">Prefere marcar sozinho? <a data-conv="agendamento" data-fill="agendamento" href="https://medbook.com.br/dralexfabricio" rel="noopener">Agendar online</a>, a qualquer hora.</p>
     <ul>
       <li><b>Consultório</b>Rua Coronel Júlio Soares, 151-B, Centro, Ubá/MG. Em frente à Unimed-Ubá, na clínica UNNA Medicina. <a data-conv="mapa" href="https://www.google.com/maps/search/?api=1&query=Rua+Coronel+J%C3%BAlio+Soares%2C+151-B%2C+Centro%2C+Ub%C3%A1+-+MG" rel="noopener">Ver no mapa</a></li>
       <li><b>Telefone e WhatsApp</b><a data-conv="telefone" href="tel:+5532998462999">(32) 99846-2999</a>, agendamento</li>
